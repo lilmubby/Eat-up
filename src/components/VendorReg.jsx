@@ -8,7 +8,7 @@ const initialState = {
   phoneNum: "",
   city: "",
   userRank: "",
-  bizName: "",
+  bizNuserRankame: "",
   bizDesc: "",
   bizAddr: "",
   storeType: "",
@@ -25,18 +25,57 @@ const initialState = {
 };
 const reducer = (state, action) => {
   switch (action.type) {
-    case value:
-      return state;
+    case "first_name":
+      return { ...state, firstName: action.firstName };
+    case "last_name":
+      return { ...state, lastName: action.lastName };
+    case "email":
+      return { ...state, email: action.email };
+    case "phone_number":
+      return { ...state, phoneNum: action.phoneNum };
+    case "password":
+      return { ...state, password: action.password };
+    case  "city":
+      return {...state, city: action.city };
+    case  "userRank":
+      return {...state, city: action.userRank };
+    case  "userRank":
+      return {...state, userRank: action.userRank };
+    case  "bizNuserRankame":
+      return {...state, bizNuserRankame: action.bizNuserRankame };
+    case  "bizDesc":
+      return {...state, bizDesc: action.bizDesc };
+    case  "bizAddr":
+      return {...state, bizAddr: action.bizAddr };
+    case  "storeType":
+      return {...state, storeType: action.storeType };
+    case  "noOfStores":
+      return {...state, noOfStores: action.noOfStores };
+    case  "orderType":
+      return {...state, orderType: action.orderType };
+    case "deliveryType":
+      return {...state, deliveryType: action.deliveryType };
+    case "social1":
+      return {...state, social1: action.social1 };
+    case "social2":
+      return {...state, social2: action.social2 };
+    case "social3":
+      return {...state, social3: action.social3 };
+    case "bizPhone":
+      return {...state, bizPhone: action.bizPhone };
+    case "social3":
+      return {...state, bizEmail: action.bizEmail };
+    case "social3":
+      return {...state, prepTime: action.prepTime };
+    case "social3":
+      return {...state, minOrder: action.minOrder };
+
 
     default:
       return state;
   }
 };
-// const Input = () => {
-//   return (
 
-//   )
-// }
 const VendorReg = (props) => {
   const [vendorInfo, dispatch] = useReducer(reducer, initialState);
 
