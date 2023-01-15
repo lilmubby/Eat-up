@@ -97,7 +97,7 @@ const CustomerReg = () => {
       <div>
         <label htmlFor="phone_number">Phone Number: </label>
         <input
-          type="number"
+          type="text"
           id="phone_number"
           name="phone_number"
           min="1"
@@ -113,7 +113,7 @@ const CustomerReg = () => {
           type="text"
           id="city"
           name="city"
-          max="254"
+          maxLength="254"
           value={customerInfo.city}
           onChange={cityHandler}
         />
@@ -123,8 +123,7 @@ const CustomerReg = () => {
         <input
           type="password"
           id="password"
-          min="1"
-          max="50"
+          maxLength="50"
           name="password"
           value={customerInfo.password}
           onChange={passwordHandler}
